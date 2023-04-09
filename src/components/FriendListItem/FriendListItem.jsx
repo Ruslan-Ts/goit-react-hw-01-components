@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function FriendListItem({avatar, name, isOnline}) {
   return <FriendListCard>
-    <Chip type={isOnline}><TbPlanet style={
+    <Chip online={isOnline}><TbPlanet style={
       {width: 40, height: 40}} /></Chip>
   <img src={avatar} alt={name} width="48" />
   <FriendName>{name}</FriendName>

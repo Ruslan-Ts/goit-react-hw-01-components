@@ -13,7 +13,7 @@ gap: 20px;
 
 export const Chip = styled.span`
 color: ${props => {
-    if (props.type) {
+    if (props.online) {
         return 'green'
     }
     return 'red'
