@@ -30,6 +30,7 @@ display: flex;
 export const UserInfo = styled.p`
 font-size: 25px;
 font-weight: 700;
+margin: 0;
 `
 
 export const StatBox = styled.ul`
@@ -46,4 +47,17 @@ background-color: gray;
 font-size: 16px;
 font-weight: 700;
 color: white;
+`
+
+export const StatItem = styled.li`
+display: flex;
+gap: 8px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+export const StatItemText = styled.span`
+font-size: 16px;
+font-weight: 900;
 `

@@ -1,4 +1,4 @@
-import {Container, DescriptionBox, Avatar, UserInfo, StatBox} from './Profile.styled'
+import {Container, DescriptionBox, Avatar, UserInfo, StatBox, StatItem, StatItemText} from './Profile.styled'
 import PropTypes from 'prop-types';
 
 function Profile({ username, tag, location, avatar, stats }) {
@@ -14,19 +14,19 @@ function Profile({ username, tag, location, avatar, stats }) {
         <UserInfo>{location}</UserInfo>
       </DescriptionBox>
 
-      <StatBox className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
+      <StatBox>
+        <StatItem>
+          <StatItemText>Followers</StatItemText>
+          <StatItemText>{stats.followers}</StatItemText>
+        </StatItem>
+        <StatItem>
+          <StatItemText>Views</StatItemText>
+          <StatItemText>{stats.views}</StatItemText>
+        </StatItem>
+        <StatItem>
+          <StatItemText>Likes</StatItemText>
+          <StatItemText>{stats.likes}</StatItemText>
+        </StatItem>
       </StatBox>
     </Container>
   );
@@ -37,7 +37,7 @@ username: PropTypes.string.isRequired,
 tag: PropTypes.string.isRequired,
 location: PropTypes.string.isRequired,
 avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
+stats: PropTypes.shape({
   followers: PropTypes.number,
   views: PropTypes.number,
   likes: PropTypes.number,
